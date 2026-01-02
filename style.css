@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+section {
+  background: white;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 10px;
+  /* Remove inline-block */
+  display: block; 
+  max-width: 800px;  /* optional: limits width */
+}
+
+
+#players {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  margin-top: 15px;
+}
+
+
+.player {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: auto; /* let grid handle sizing */
+  min-width: 140px; /* optional minimum size */
+  text-align: center;
+  background-color: #fff;
+}
+
+
+
+button {
+  margin: 2px;
+  padding: 5px 10px;
+  cursor: pointer;
+}

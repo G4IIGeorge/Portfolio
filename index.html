@@ -2,31 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>George Hindes | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTG Game Utility</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Utility: The Gathering</h1>
 
-  <header>
-    <h1>George Hindes</h1>
-    <p></p>Aspiring Computer Science Student</p>
-    <p>
-      View my github:
-      <a href="https://github.com/G4IIGeorge">https://github.com/G4IIGeorge</a>
-    </p>
-    <P>
-     View my CV:
-     <a href="https://github.com/G4IIGeorge/Portfolio/blob/main/George%20Hindes%20CV%202025.docx.pdf">https://github.com/G4IIGeorge/Portfolio/blob/main/George%20Hindes%20CV%202025.docx.pdf</a>
-    </p>
-  
+  <!-- Game Setup -->
+  <section id="gameSetup">
+    <label>Number of Players: 
+      <select id="numPlayers">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" selected>4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </label>
 
-  </header>
+    <label>Starting Life:
+      <select id="startingLife">
+        <option value="20" selected>20</option>
+        <option value="40">40</option>
+      </select>
+    </label>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I am learning core areas of computer science and using this website in combination with github to build and showcase projects as I develop my technical skills.</p>
-    <p>I enjoy problem-solving and logical thinking, both in programming and through hobbies like playing Magic: The Gathering.</p>
-    <p>Alongside my studies, I currently work at McDonald’s, where I’ve developed strong teamwork and time-management skills, and I am actively working towards a career in technology.</p>
+    <button id="resetGame">Reset Game</button>
   </section>
+
+  <!-- Player Life Tracker -->
+  <section id="players"></section>
+
+  <!-- Dice Roller -->
+  <section id="diceRoller">
+    <label>Dice:
+      <select id="diceType">
+        <option value="4">D4</option>
+        <option value="6">D6</option>
+        <option value="8">D8</option>
+        <option value="10">D10</option>
+        <option value="12">D12</option>
+        <option value="20" selected>D20</option>
+      </select>
+    </label>
+    <button id="rollDice">Roll</button>
+    <span id="diceResult"></span>
+  </section>
+
+  <!-- Coin Flip -->
+  <section id="coinFlip">
+    <button id="flipCoin">Flip Coin</button>
+    <span id="coinResult"></span>
+  </section>
+
+  <!-- Random First Player -->
+  <section id="firstPlayer">
+    <button id="chooseFirst">Random First Player</button>
+    <span id="firstPlayerResult"></span>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
